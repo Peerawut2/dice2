@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>ทอยเต๋า</title>
+    <style>
+        .top{
+            text-align: center;
+            color: blueviolet;
+        }
+        button{
+            font-size: 2rem;
+        }
+        img{
+            margin: 20px;
+        }
+        .butt{
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div class="top">
+        <h1>ทอยลูกเต๋ามหาสนุก</h1>
+    </div>
+    
+    <div class="dice" align="center">
+        <img class="img" src="1.png">
+        <img class="img" src="1.png">
+        <img class="img"  src="1.png">
+    </div>
+    <div class="butt">
+        <button onclick="btn()">ทอยเต๋า</button>
+    </div>
+    <script>
+        let dice = document.getElementsByClassName('img');
+        function btn(){
+            for(let i=0;i<dice.length;i++){
+                let ran = (Math.random()*6)+1;
+
+                dice[i].src = parseInt(ran) + '.png';
+                console.log(parseInt(ran) +'.png');
+            }
+        }
+    </script>
+</body>
+</html>
+
